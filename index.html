@@ -57,7 +57,7 @@
     const symbols = ['🍒', '🍋', '🍊', '🍇', '🍉', '7️⃣'];
 
     // Replace with your own Teachable Machine model URL
-    const modelURL = "https://teachablemachine.withgoogle.com/models/72oWK2mJ3/model.json";
+    const modelURL = "https://teachablemachine.withgoogle.com/models/72oWK2mJ3/";
 
     async function setup() {
       // Setup webcam
@@ -84,7 +84,7 @@
         currentLabel = results[0].label;
         console.log("Detected:", currentLabel);
 
-        if (previousLabel === "Neutral" && currentLabel === "Punch") {
+        if (previousLabel === "Punch" && currentLabel === "Punch") {
           triggerSpin();
         }
 
